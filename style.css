@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('//use.fontawesome.com/releases/v5.15.3/css/all.css');
+body {
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Nav/Layout */
+
+hr {
+  border: 3px solid black;
+}
+
+.navbar-nav > li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.nav-link {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 26px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.bottom {
+  float: right;
+}
+
+.search-btn {
+  background-color: #8d56fd;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 10px;
+}
+
+#footer {
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+#navbar {
+  background-color: black;
+}
+
+footer a {
+  color: white;
+}
+
+footer i {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+footer i:hover {
+  transform: scale(1.1);
+}
+.shfooter .collapse {
+  display: inherit;
+}
+
+.resize {
+  text-align: center;
+}
+.resize {
+  margin-top: 3rem;
+  font-size: 1.25rem;
+}
+/*RESIZESCREEN ANIMATION*/
+.fa-angle-double-right {
+  animation: rightanime 1s linear infinite;
+}
+
+.fa-angle-double-left {
+  animation: leftanime 1s linear infinite;
+}
+
+/* Form Stuff */
+
+form {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+form input {
+  border: 0;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+form input:focus {
+  outline: none;
+}
+form button {
+  background-color: #000;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 18px;
+}
+
+form button:hover {
+  background-color: #48268b;
+}
+
+.fa-shopping-cart {
+  margin: 20px 30px;
+  width: 20px;
+  height: 30px;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Intro Stuff */
+
+.intro {
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 1s;
+}
+
+.fadeIn {
+  animation: fadeIn 3s;
+}
+.fadeOut {
+  animation: fadeOut 1s;
+}
+
+.introLogo {
+  position: absolute;
+  animation: introLogo 3s;
+}
+.tl {
+  position: absolute;
+  animation: introLogo 2s;
+}
+.tr {
+  position: absolute;
+  animation: introLogo 1s;
+}
+.bl {
+  position: absolute;
+  animation: introLogo 1.5s;
+}
+.br {
+  position: absolute;
+  animation: introLogo 1.25s;
+}
+/* .btn-size:focus {
+  border: 2px solid black;
+} */
+
+/* Main Body */
+
+.shirt-section {
+  margin-top: 5em;
+}
+
+.gridShirt:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.gridShirt {
+  margin-top: 3em;
+}
+
+.awards {
+  display: flex;
+  flex-flow: row;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1340px) {
+  .navbar-nav > li {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav-link {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .collapse {
+    display: none !important;
+  }
+  form input {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  .shfooter ul {
+    margin-bottom: 0;
+  }
+
+  .shfooter .collapse {
+    display: none;
+  }
+
+  .shfooter .collapse.show {
+    display: block;
+  }
+
+  .shfooter .title .fa-angle-up,
+  .shfooter .title[aria-expanded='true'] .fa-angle-down {
+    display: none;
+  }
+
+  .shfooter .title[aria-expanded='true'] .fa-angle-up {
+    display: block;
+  }
+
+  .shfooter .navbar-toggler {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+/* Animations */
+
+@keyframes introLogo {
+  0% {
+    transform: translateX(-200%);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rightanime {
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+@keyframes leftanime {
+  50% {
+    transform: translateX(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+}
